@@ -4,11 +4,11 @@ from datetime import date
 from datetime import time
 import re, datetime
 
-# df = pd.read_csv('LightStatusc.csv', parse_dates=["Date"])
+csvfile = '/home/mikee/Python_proj/lights/lightcst/data/LightStatus.csv'
 df = pd.read_csv(csvfile, parse_dates=["Date"])
 
 dts = df["Date"]
-sta = df["Time"]
+# sta = df["Time"]
 dates =[]
 
 for row in dts:
