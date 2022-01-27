@@ -39,7 +39,7 @@ def getontimes(csvfile, switchname):
             if flend != 0:
                 ontime = flend - flstart
                 datetm = datetm + ontime
-                frow = [switchname, row['Date'], ontime]
+                frow = [switchname, ontime]
                 tms.append(frow)
                 flend = 0   # Reset the end point gets it readly for the next loop
 
@@ -47,8 +47,3 @@ def getontimes(csvfile, switchname):
     
     return(tms)        
 
-# Define location of data file
-csvfile = '/home/mikee/Python_proj/lightcst/data/LightStatus.csv'
-# Combine all of the measurements in one list
-ontimes = (getontimes(csvfile, "Front Lights"))
-ontimes = ontimes + (getontimes(csvfile, "Back Yard Lights"))
