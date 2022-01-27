@@ -8,54 +8,47 @@
 import datetime
 import pandas as pd
 
-p_row = 0  # holds the previos rows value
-frow = ""  # holds front lights time and lable
-flstart = 0  # Time the front lights are turned on
-flend = 0  # Time the front lights are turned off
-blstart = 0 # Time the back lights are turned on
-blend = 0  # Time the back lights are turned off
-ontime = 0  # Temp storage for a total on time
-fronttime = datetime.timedelta()
-backtime = datetime.timedelta()
-tms = []
 
-df = pd.read_csv('/home/mikee/Python_proj/lightcst/data/LightStatus.csv') # reads the csv file into a Pandas Data Frame.
-format = '%y/%m/%dT%H:%M:%S]' # The date format string used to convert to a date/time object
-
-# Find the on time periods for the Front lights
-for index, row in df.iterrows():
-    if row['Name'] == 'Front Lights':
-        if row['State'] == 1 and p_row == 0:
-            flstart = datetime.datetime.strptime(row['Date'], format)
-            
-        if row['State'] == 0 and p_row == 1:
-            flend = datetime.datetime.strptime(row['Date'], format)
-
-        if flend != 0:
-            ontime = flend - flstart
-            fronttime = fronttime + ontime
-            print(ontime,  fronttime)
-            frow = ['Front', row['Date'], ontime]
-            tms.append(frow)
-            flend = 0   # Reset the end point gets it readly for the next loop
-
-        p_row = row['State']
+def getontimes(csvfile, switchname):
+    """ This fuction collects the sum of ON times from a CSV file and returns them in a list """
     
-# Find the on time for the Back Lights
-for index, row in df.iterrows():
-    if row['Name'] == 'Back Yard Lights':
-        if row['State'] == 1 and p_row == 0:
-            blstart = datetime.datetime.strptime(row['Date'], format)
-            
-        if row['State'] == 0 and p_row == 1:
-            blend = datetime.datetime.strptime(row['Date'], format)
-        
-        if blend != 0:
-            ontime = blend - blstart
-            backtime = backtime + ontime
-            brow = ['Back', row['Date'], ontime]
-            tms.append(brow)
-            blend = 0   # Reset the end point to get it ready for the next loop
-        
-        p_row = row['State']
+    p_row = 0  # holds the previos row values
+    frow = ""  # holds the current row values
+    flstart = 0  # Time the lights are turned on
+    flend = 0  # Time the lights are turned off
+    ontime = 0  # Temp storage for total ON time
+    ON = 1
+    OFF = 0
 
+    datetm = datetime.timedelta()
+    tms = []
+
+    df = pd.read_csv(csvfile) # reads the csv file into a Pandas Data Frame.
+    
+    format = '%y/%m/%dT%H:%M:%S]' # The date format string used to convert to a date/time object
+
+    # Find each of the ON time periods for the named light switch
+    for index, row in df.iterrows():
+        if row['Name'] == switchname:
+            if row['State'] == ON and p_row == OFF: # Find the first occurance of ON when OFF for the named switch.
+                flstart = datetime.datetime.strptime(row['Date'], format)
+                
+            if row['State'] == OFF and p_row == ON: # Find the first occurance of OFF when ON for the named switch.
+                flend = datetime.datetime.strptime(row['Date'], format)
+
+            if flend != 0:
+                ontime = flend - flstart
+                datetm = datetm + ontime
+                frow = [switchname, row['Date'], ontime]
+                tms.append(frow)
+                flend = 0   # Reset the end point gets it readly for the next loop
+
+            p_row = row['State'] # All done set the previos row to the current.
+    
+    return(tms)        
+
+# Define location of data file
+csvfile = '/home/mikee/Python_proj/lightcst/data/LightStatus.csv'
+# Combine all of the measurements in one list
+ontimes = (getontimes(csvfile, "Front Lights"))
+ontimes = ontimes + (getontimes(csvfile, "Back Yard Lights"))
