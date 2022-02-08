@@ -1,15 +1,25 @@
-# **********************************************************************************************
-# Synopsis: calclighttime for Python 3
-# Written by: Mike Lemon
-# Date of Creation: Jan 25, 2022
-# Version: 0.0.2
-# **********************************************************************************************
+'''
+
+calclighttime for Python 3
+Written by: Mike Lemon
+Date of Creation: Jan 25, 2022
+Version: 0.0.2
+
+''' 
 import datetime
 import pandas as pd
 
 def getontimes(csvfile, switchname):
-    """ This fuction collects the sum of ON times from a CSV file and returns a summary in a list """
-    
+
+    ''' This fuction collects the sum of ON times from a CSV file and returns a summary times in a list
+
+	Arguments:
+		CSV path and file name, Name of light switch
+	
+	Returns:
+		The full file name and path to the selected file.
+
+	'''
     p_row = 0  # holds the previos row value
     frow = ""  # holds the current row value
     flstart = 0  # Time and date the lights are turned on
