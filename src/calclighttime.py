@@ -8,14 +8,13 @@ import datetime
 import pandas as pd
 
 def getontimes(csvfile, switchname):
-    """ This fuction collects the sum of ON times from a CSV file and returns them in a list """
+    """ This fuction collects the sum of ON times from a CSV file and returns a summary in a list """
     
     p_row = 0  # holds the previos row value
     frow = ""  # holds the current row value
     flstart = 0  # Time and date the lights are turned on
     flend = 0  # Time and date the lights are turned off
     ontime = 0  # Temp storage for total ON time
-
     ON = 1
     OFF = 0
     datetm = datetime.timedelta()
