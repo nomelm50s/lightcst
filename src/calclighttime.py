@@ -35,7 +35,7 @@ def getontimes(csvfile, switchname):
 
             if flend != 0: # The lights are still ON
                 ontime = flend - flstart # delta of ON time
-                datetm = datetm + ontime # Running sum of ON time
+                datetm = datetm + ontime # Running sum of ON times
                 time = str(ontime) # convert ontime to a formatted string
                 sumtime = str(datetm) # convert summary time to a formatted string
                 frow = [switchname, time, sumtime] # store the current values 
