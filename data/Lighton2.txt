@@ -20,7 +20,6 @@
 ['Front Lights', '13:16:01', '11 days, 9:08:22']
 ['Front Lights', '12:04:36', '11 days, 21:12:58']
 ['Front Lights', '13:13:01', '12 days, 10:25:59']
-['Front Lights', '13:11:00', '12 days, 23:36:59']
 ['Back Yard Lights', '13:59:00', '13:59:00']
 ['Back Yard Lights', '13:57:00', '1 day, 3:56:00']
 ['Back Yard Lights', '13:54:00', '1 day, 17:50:00']
@@ -41,4 +40,3 @@
 ['Back Yard Lights', '13:16:01', '12 days, 6:15:57']
 ['Back Yard Lights', '12:06:36', '12 days, 18:22:33']
 ['Back Yard Lights', '13:10:01', '13 days, 7:32:34']
-['Back Yard Lights', '13:12:00', '13 days, 20:44:34']

@@ -29,7 +29,7 @@ def getfname():
 	maxchoice = len(fpaths)
 
 	#Get user selection until a valid number is selected
-	while (choice > len(fpaths):
+	while (choice > len(fpaths)):
 		choice = int(input("Select a file number to process: "))  # assuming valid inputs
 	
 	else:
