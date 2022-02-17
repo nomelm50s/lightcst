@@ -20,10 +20,6 @@ def getfname():
 	
 	"""
 
-	#dirpath = r"/home/mike/PythonProjects/light_cont/data/"  # the directory that contains the log files
-	#prefix = "FileName"
-	#fpaths = glob.glob(os.path.join(dirpath, "*.txt".format(prefix)))  # get all the log files
-	#testpath = os.path.join(dirpath, "*.txt")
 	fpaths = glob.glob("/home/mike/PythonProjects/light_cont/data/*.txt")
 	#fpaths.sort(key=lambda fname: int(fname.split('.',1)[0][len(prefix):]))  # sort the log files by number
 
