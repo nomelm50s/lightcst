@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 '''
 
 calclighttime for Python 3

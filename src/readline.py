@@ -1,26 +1,31 @@
+#!/usr/bin/python3
+
 import os
 import sys
 import glob
 
 def getfname():
 	
-	''' List all log files in the data folder as menu items and allows selection by number.
-
-	Arguments:
-		None
+	""" creates a numbered list of the data files in a folder and allows one to be selected.
+		
+	:param None:
 	
-	Returns:
-		The full file name and path to the selected file.
+	:rtype: str
+	:return: The file name and full path of the selected file.
 
 	Created 11-9-2020 by Mike Lemon
 
-	'''
+	TODO: Add a functioin to allow picking the data folder.
+
+	"""
+
 	#Make first pass fail the while test below
 	choice = 5000 
 	
 	#Get the file names and paths
-	fpaths = glob.glob("/home/mike/PythonProjects/light_cont/data/*.txt")
 	
+	fpaths = glob.glob("../data/*.csv")
+	#fpaths = glob.glob("/home/mikee/projects/lightcst/data/*.csv")
 	#Print a list of the files found
 	print("Files found:")
 	for i,fpath in enumerate(fpaths, 1):
@@ -33,7 +38,6 @@ def getfname():
 		choice = int(input("Select a file number to process: "))  # assuming valid inputs
 	
 	else:
-		
 		choice -= 1  # correcting for python's 0-indexing
 		if choice < 0:
 			choice = 0
@@ -44,14 +48,13 @@ def getfname():
 
 	return fileName
 
-
 def lightstatus(filename):
 	
-	''' Parses and prints the light switch status from a file created 
-	on the Pi3 to show on and off times for the outside lights.
+	''' Parses and prints the light switch status from a file 
+	to show on and off times for the outside lights.
 	
 	Arguments: 
-		full path and filename of the target file.
+		full path and filename of the data file.
 	
 	Returns:
 		nothing
@@ -59,7 +62,7 @@ def lightstatus(filename):
 	Created 11/7/2020 by Mike Lemon
 	
 	'''
-	count=0
+	
 	prevstate = 0
 	print(" ")
 	print(filename)
@@ -68,30 +71,34 @@ def lightstatus(filename):
 	file1 = open(filename, 'r') 
 	Lines = file1.readlines() 
 	
-	# Iterate through each line
+	
 	for line in Lines: 
 		
-		lightstate = line.split(":")[6]
-		lightstate = lightstate.split("}")[0]
-		
-		sampletime = line.split("T")[1]
-		sampletime = sampletime.split("-")[0]
-		
-		sampledate = line.split("\"")[3]
-		sampledate = sampledate.split("T")[0]
+		# Parse the value of State, skip the first few lines
+		lightstate = line.split(",")[1] # keep the second element after the comma
+		if lightstate != "State" and prevstate != "State": # check that it is past the column lables		
 
-		if int(prevstate) < int(lightstate):
-			print("Date:   ", sampledate)
-			print("On Time:  ", sampletime)
+			# Get only the time string from the line
+			sampletime = line.split("T")[1] # strip everything to the left f the T
+			sampletime = sampletime.split("\"")[0] # strip everything to the right of the Last double quote
 		
-		if int(prevstate) > int(lightstate):
-			print("Off Time: ", sampletime)
-			print(" ")
-			
+			sampledate = line.split("T")[0] # Keep everything to the left of the T
+			sampledate = sampledate.split("\"")[5] #keep everyting to the right of the last double quote
+	
+			# print the date, on, and off times
+			if int(prevstate) < int(lightstate):
+				print("Date:     ", sampledate)
+				print("On Time:  ", sampletime)
+		
+			if int(prevstate) > int(lightstate):
+				print("Off Time: ", sampletime)
+				print(" ")
+		# save thte current lightstate as the previoius	
 		prevstate = lightstate
 	
 	# Close file when done
 	file1.close()
-        
+
+# test line to call the functioins        
 lightstatus(getfname())
 

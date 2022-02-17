@@ -1,9 +1,25 @@
+#!/usr/bin/python3
+
 import os
 import sys
 import glob
+	
+""" Readline old was the first attempt but ultimatly not used. """
 
 def getfname():
 	
+	""" Prompts for a file name.
+	
+	Arguments: 
+		nothing
+	
+	Returns:
+		the selected file name and path.
+		
+	Created 11/7/2020 by Mike Lemon
+	
+	"""
+
 	#dirpath = r"/home/mike/PythonProjects/light_cont/data/"  # the directory that contains the log files
 	#prefix = "FileName"
 	#fpaths = glob.glob(os.path.join(dirpath, "*.txt".format(prefix)))  # get all the log files
@@ -40,8 +56,7 @@ def getfname():
 
 def lightstatus(filename):
 	
-	''' Parses and prints the light switch status from a file created 
-	on the Pi3 to show on and off times for the outside lights.
+	""" Parses and prints the light switch on times from a file.
 	
 	Arguments: 
 		full path and filename of the target file.
@@ -51,7 +66,7 @@ def lightstatus(filename):
 		
 	Created 11/7/2020 by Mike Lemon
 	
-	'''
+	"""
 	
 
 	count=0

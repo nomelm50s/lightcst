@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+
 # File list creator
 # Modified to a Python 3 file on Jan 23, 2021
 # By: Mike Lemon
