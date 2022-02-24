@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+""" This module contains functions that create a pick list from 
+	a numbered list of files 	and another calculates the time
+ 	that the outdoor lights are on.
+
+	Date Created: 13 Feb 2022
+    
+    Created by: Mike Lemon
+    
+    Version: 0.1    
+
+"""
+
 
 import os
 import sys

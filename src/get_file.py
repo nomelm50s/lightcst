@@ -1,14 +1,18 @@
 #!/usr/bin/python3
+""" Creates a numbered list of files found in the target
+    directory and prompts for a selection.
+    
+    File list creator
+    Modified to a Python 3 file on Jan 23, 2021
+    By: Mike Lemon
 
-# File list creator
-# Modified to a Python 3 file on Jan 23, 2021
-# By: Mike Lemon
-#
+"""
 
 from fileinput import filename
 import os
 import sys
 
+# path to target directory
 items = os.listdir("/home/mikee/projects/lightcst/data/")
 
 fileList = []

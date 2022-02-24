@@ -1,12 +1,17 @@
 #!/usr/bin/python3
+''' totaltimeon gets the total light-ON times for each switch called
+    in this module.
+    
+    Written by: Mike Lemon
+    
+    Date Created: Jan 27, 2022
+    
+    Version: 0.2
+    
+'''
+
 from lighttime import ontimes 
 import os
-''' 
-totaltimeon gets the total light-ON times for each switch called
-Written by: Mike Lemon
-Date of Creation: Jan 27, 2022
-Version: 0.0.2
-'''
 
 # Defines the location of a data file
 # TODO: make this a pick list in the gui
