@@ -1,4 +1,16 @@
 #!/usr/bin/python3
+""" This module contains functions that create a pick list from 
+	a numbered list of files 	and another calculates the time
+ 	that the outdoor lights are on.
+
+	Date Created: 13 Feb 2022
+    
+    Created by: Mike Lemon
+    
+    Version: 0.1    
+
+"""
+
 
 import os
 import sys
@@ -12,7 +24,7 @@ def getfname():
 	
 	:rtype: str
 	:return: The file name and full path of the selected file.
-
+readline
 	Created 11-9-2020 by Mike Lemon
 
 	TODO: Add a functioin to allow picking the data folder.
@@ -100,5 +112,5 @@ def lightstatus(filename):
 	file1.close()
 
 # test line to call the functioins        
-lightstatus(getfname())
+# lightstatus(getfname())
 

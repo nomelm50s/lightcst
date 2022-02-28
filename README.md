@@ -1,8 +1,20 @@
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+**Table of Contents**  *generated with [DocToc](https://github.com/thlorenz/doctoc)*
+
+- [lightcst](#lightcst)
+- [Automated - Analysis of Electrical Light Use](#automated---analysis-of-electrical-light-use)
+  - [Functional specifications](#functional-specifications)
+  - [Date and Time Conversion](#date-and-time-conversion)
+  - [GetRelayState Javascript function](#getrelaystate-javascript-function)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
 # lightcst
 
 # Automated - Analysis of Electrical Light Use
 
-This project is being created to determine the approximate cost of running the outdoor lights all night. The lights are currently controlled by a node-red flow running on a virtual instance of Ubuntu 20.04. The virtual machine is running on a Windows 10 computer. The Node-RED flow also writes a packet of data to the "LightStatus.csv" CSV file every 2 minutes. The  file is located in the '~/Public/log/' folder and is accessible from any machine on the local network.
+This project is being created to determine the approximate cost of running the outdoor lights all night. The lights are currently controlled by a Node-RED flow running on a virtual instance of Ubuntu 20.04. The virtual machine is running on a Windows 10 computer. The Node-RED flow also writes a packet of data to the "LightStatus.csv" CSV file every 2 minutes. The  file is located in the '~/Public/log/' folder and is accessible from any machine on the local network.
 
 A function 'GetRelayState()' in the node-red flow captures the 'date,time', 'device name', and status of each switch on the network.These values are stored in the node-red msg.payload object and then are written to the 'LightStatus.csv' file.
 
