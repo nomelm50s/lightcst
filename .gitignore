@@ -13,3 +13,4 @@ docs/aavso.sqlite
 data/Lighton4.txt
 data/Lighton.txt
 data/LightStatus.csv
+src/__pycache__/rdline.cpython-39.pyc
