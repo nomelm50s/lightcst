@@ -1,0 +1,1330 @@
+.
+├── data
+│   ├── Lighton1.txt
+│   ├── Lighton2.txt
+│   ├── Lighton4.txt
+│   ├── Lighton.txt
+│   ├── LightStatus1.csv
+│   ├── LightStatus2.csv
+│   ├── LightStatus3.csv
+│   ├── LightStatus4.csv
+│   └── LightStatus.csv
+├── docs
+│   ├── aavso.sqlite
+│   ├── CalcLightTime.ipynb
+│   ├── devplan.ipynb
+│   ├── exampledocs.txt
+│   ├── README.ipynb
+│   ├── test_import.ipynb
+│   └── Untitled.ipynb
+├── LICENSE.txt
+├── lightcst-tree
+├── MANIFEST.in
+├── README.md
+├── requirements.txt
+├── setup.cfg
+├── setup.py
+├── src
+│   ├── get_file.py
+│   ├── light_time_anal.py
+│   ├── lighttime.py
+│   ├── __pycache__
+│   │   ├── calclighttime.cpython-38.pyc
+│   │   ├── calclighttime.cpython-39.pyc
+│   │   ├── get_file.cpython-39.pyc
+│   │   ├── lighttime.cpython-38.pyc
+│   │   ├── lighttime.cpython-39.pyc
+│   │   ├── rdline.cpython-39.pyc
+│   │   ├── readline.cpython-38.pyc
+│   │   ├── readline.cpython-39.pyc
+│   │   └── totaltimeon.cpython-39.pyc
+│   ├── rdline.py
+│   ├── readlineOld.py
+│   └── totaltimeon.py
+├── tests
+│   ├── examaple
+│   └── tests.py
+└── venv
+    ├── bin
+    │   ├── activate
+    │   ├── activate.csh
+    │   ├── activate.fish
+    │   ├── Activate.ps1
+    │   ├── pip
+    │   ├── pip3
+    │   ├── pip3.9
+    │   ├── python -> python3
+    │   ├── python3 -> /home/mikee/anaconda3/bin/python3
+    │   └── python3.9 -> python3
+    ├── include
+    ├── lib
+    │   ├── python3.8
+    │   │   └── site-packages
+    │   │       ├── pip
+    │   │       │   ├── _internal
+    │   │       │   │   ├── cli
+    │   │       │   │   ├── commands
+    │   │       │   │   ├── distributions
+    │   │       │   │   ├── index
+    │   │       │   │   ├── models
+    │   │       │   │   ├── network
+    │   │       │   │   ├── operations
+    │   │       │   │   │   ├── build
+    │   │       │   │   │   └── install
+    │   │       │   │   ├── req
+    │   │       │   │   ├── utils
+    │   │       │   │   └── vcs
+    │   │       │   └── _vendor
+    │   │       ├── pip-20.0.2.dist-info
+    │   │       ├── pkg_resources
+    │   │       │   ├── extern
+    │   │       │   └── _vendor
+    │   │       │       └── packaging
+    │   │       ├── pkg_resources-0.0.0.dist-info
+    │   │       ├── setuptools
+    │   │       │   ├── command
+    │   │       │   ├── extern
+    │   │       │   └── _vendor
+    │   │       │       └── packaging
+    │   │       ├── setuptools-44.0.0.dist-info
+    │   │       ├── wheel
+    │   │       │   └── cli
+    │   │       └── wheel-0.34.2.dist-info
+    │   └── python3.9
+    │       └── site-packages
+    │           ├── _distutils_hack
+    │           │   ├── __init__.py
+    │           │   ├── override.py
+    │           │   └── __pycache__
+    │           │       ├── __init__.cpython-39.pyc
+    │           │       └── override.cpython-39.pyc
+    │           ├── distutils-precedence.pth
+    │           ├── pip
+    │           │   ├── __init__.py
+    │           │   ├── _internal
+    │           │   │   ├── build_env.py
+    │           │   │   ├── cache.py
+    │           │   │   ├── cli
+    │           │   │   │   ├── autocompletion.py
+    │           │   │   │   ├── base_command.py
+    │           │   │   │   ├── cmdoptions.py
+    │           │   │   │   ├── command_context.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── main_parser.py
+    │           │   │   │   ├── main.py
+    │           │   │   │   ├── parser.py
+    │           │   │   │   ├── progress_bars.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── autocompletion.cpython-39.pyc
+    │           │   │   │   │   ├── base_command.cpython-39.pyc
+    │           │   │   │   │   ├── cmdoptions.cpython-39.pyc
+    │           │   │   │   │   ├── command_context.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── main.cpython-39.pyc
+    │           │   │   │   │   ├── main_parser.cpython-39.pyc
+    │           │   │   │   │   ├── parser.cpython-39.pyc
+    │           │   │   │   │   ├── progress_bars.cpython-39.pyc
+    │           │   │   │   │   ├── req_command.cpython-39.pyc
+    │           │   │   │   │   ├── spinners.cpython-39.pyc
+    │           │   │   │   │   └── status_codes.cpython-39.pyc
+    │           │   │   │   ├── req_command.py
+    │           │   │   │   ├── spinners.py
+    │           │   │   │   └── status_codes.py
+    │           │   │   ├── commands
+    │           │   │   │   ├── cache.py
+    │           │   │   │   ├── check.py
+    │           │   │   │   ├── completion.py
+    │           │   │   │   ├── configuration.py
+    │           │   │   │   ├── debug.py
+    │           │   │   │   ├── download.py
+    │           │   │   │   ├── freeze.py
+    │           │   │   │   ├── hash.py
+    │           │   │   │   ├── help.py
+    │           │   │   │   ├── index.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── install.py
+    │           │   │   │   ├── list.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── cache.cpython-39.pyc
+    │           │   │   │   │   ├── check.cpython-39.pyc
+    │           │   │   │   │   ├── completion.cpython-39.pyc
+    │           │   │   │   │   ├── configuration.cpython-39.pyc
+    │           │   │   │   │   ├── debug.cpython-39.pyc
+    │           │   │   │   │   ├── download.cpython-39.pyc
+    │           │   │   │   │   ├── freeze.cpython-39.pyc
+    │           │   │   │   │   ├── hash.cpython-39.pyc
+    │           │   │   │   │   ├── help.cpython-39.pyc
+    │           │   │   │   │   ├── index.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── install.cpython-39.pyc
+    │           │   │   │   │   ├── list.cpython-39.pyc
+    │           │   │   │   │   ├── search.cpython-39.pyc
+    │           │   │   │   │   ├── show.cpython-39.pyc
+    │           │   │   │   │   ├── uninstall.cpython-39.pyc
+    │           │   │   │   │   └── wheel.cpython-39.pyc
+    │           │   │   │   ├── search.py
+    │           │   │   │   ├── show.py
+    │           │   │   │   ├── uninstall.py
+    │           │   │   │   └── wheel.py
+    │           │   │   ├── configuration.py
+    │           │   │   ├── distributions
+    │           │   │   │   ├── base.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── installed.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── base.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── installed.cpython-39.pyc
+    │           │   │   │   │   ├── sdist.cpython-39.pyc
+    │           │   │   │   │   └── wheel.cpython-39.pyc
+    │           │   │   │   ├── sdist.py
+    │           │   │   │   └── wheel.py
+    │           │   │   ├── exceptions.py
+    │           │   │   ├── index
+    │           │   │   │   ├── collector.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── package_finder.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── collector.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── package_finder.cpython-39.pyc
+    │           │   │   │   │   └── sources.cpython-39.pyc
+    │           │   │   │   └── sources.py
+    │           │   │   ├── __init__.py
+    │           │   │   ├── locations
+    │           │   │   │   ├── base.py
+    │           │   │   │   ├── _distutils.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── base.cpython-39.pyc
+    │           │   │   │   │   ├── _distutils.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   └── _sysconfig.cpython-39.pyc
+    │           │   │   │   └── _sysconfig.py
+    │           │   │   ├── main.py
+    │           │   │   ├── metadata
+    │           │   │   │   ├── base.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── pkg_resources.py
+    │           │   │   │   └── __pycache__
+    │           │   │   │       ├── base.cpython-39.pyc
+    │           │   │   │       ├── __init__.cpython-39.pyc
+    │           │   │   │       └── pkg_resources.cpython-39.pyc
+    │           │   │   ├── models
+    │           │   │   │   ├── candidate.py
+    │           │   │   │   ├── direct_url.py
+    │           │   │   │   ├── format_control.py
+    │           │   │   │   ├── index.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── link.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── candidate.cpython-39.pyc
+    │           │   │   │   │   ├── direct_url.cpython-39.pyc
+    │           │   │   │   │   ├── format_control.cpython-39.pyc
+    │           │   │   │   │   ├── index.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── link.cpython-39.pyc
+    │           │   │   │   │   ├── scheme.cpython-39.pyc
+    │           │   │   │   │   ├── search_scope.cpython-39.pyc
+    │           │   │   │   │   ├── selection_prefs.cpython-39.pyc
+    │           │   │   │   │   ├── target_python.cpython-39.pyc
+    │           │   │   │   │   └── wheel.cpython-39.pyc
+    │           │   │   │   ├── scheme.py
+    │           │   │   │   ├── search_scope.py
+    │           │   │   │   ├── selection_prefs.py
+    │           │   │   │   ├── target_python.py
+    │           │   │   │   └── wheel.py
+    │           │   │   ├── network
+    │           │   │   │   ├── auth.py
+    │           │   │   │   ├── cache.py
+    │           │   │   │   ├── download.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── lazy_wheel.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── auth.cpython-39.pyc
+    │           │   │   │   │   ├── cache.cpython-39.pyc
+    │           │   │   │   │   ├── download.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── lazy_wheel.cpython-39.pyc
+    │           │   │   │   │   ├── session.cpython-39.pyc
+    │           │   │   │   │   ├── utils.cpython-39.pyc
+    │           │   │   │   │   └── xmlrpc.cpython-39.pyc
+    │           │   │   │   ├── session.py
+    │           │   │   │   ├── utils.py
+    │           │   │   │   └── xmlrpc.py
+    │           │   │   ├── operations
+    │           │   │   │   ├── build
+    │           │   │   │   │   ├── __init__.py
+    │           │   │   │   │   ├── metadata_legacy.py
+    │           │   │   │   │   ├── metadata.py
+    │           │   │   │   │   ├── __pycache__
+    │           │   │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   │   ├── metadata.cpython-39.pyc
+    │           │   │   │   │   │   ├── metadata_legacy.cpython-39.pyc
+    │           │   │   │   │   │   ├── wheel.cpython-39.pyc
+    │           │   │   │   │   │   └── wheel_legacy.cpython-39.pyc
+    │           │   │   │   │   ├── wheel_legacy.py
+    │           │   │   │   │   └── wheel.py
+    │           │   │   │   ├── check.py
+    │           │   │   │   ├── freeze.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── install
+    │           │   │   │   │   ├── editable_legacy.py
+    │           │   │   │   │   ├── __init__.py
+    │           │   │   │   │   ├── legacy.py
+    │           │   │   │   │   ├── __pycache__
+    │           │   │   │   │   │   ├── editable_legacy.cpython-39.pyc
+    │           │   │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   │   ├── legacy.cpython-39.pyc
+    │           │   │   │   │   │   └── wheel.cpython-39.pyc
+    │           │   │   │   │   └── wheel.py
+    │           │   │   │   ├── prepare.py
+    │           │   │   │   └── __pycache__
+    │           │   │   │       ├── check.cpython-39.pyc
+    │           │   │   │       ├── freeze.cpython-39.pyc
+    │           │   │   │       ├── __init__.cpython-39.pyc
+    │           │   │   │       └── prepare.cpython-39.pyc
+    │           │   │   ├── __pycache__
+    │           │   │   │   ├── build_env.cpython-39.pyc
+    │           │   │   │   ├── cache.cpython-39.pyc
+    │           │   │   │   ├── configuration.cpython-39.pyc
+    │           │   │   │   ├── exceptions.cpython-39.pyc
+    │           │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   ├── main.cpython-39.pyc
+    │           │   │   │   ├── pyproject.cpython-39.pyc
+    │           │   │   │   ├── self_outdated_check.cpython-39.pyc
+    │           │   │   │   └── wheel_builder.cpython-39.pyc
+    │           │   │   ├── pyproject.py
+    │           │   │   ├── req
+    │           │   │   │   ├── constructors.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── constructors.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── req_file.cpython-39.pyc
+    │           │   │   │   │   ├── req_install.cpython-39.pyc
+    │           │   │   │   │   ├── req_set.cpython-39.pyc
+    │           │   │   │   │   ├── req_tracker.cpython-39.pyc
+    │           │   │   │   │   └── req_uninstall.cpython-39.pyc
+    │           │   │   │   ├── req_file.py
+    │           │   │   │   ├── req_install.py
+    │           │   │   │   ├── req_set.py
+    │           │   │   │   ├── req_tracker.py
+    │           │   │   │   └── req_uninstall.py
+    │           │   │   ├── resolution
+    │           │   │   │   ├── base.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── legacy
+    │           │   │   │   │   ├── __init__.py
+    │           │   │   │   │   ├── __pycache__
+    │           │   │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   │   └── resolver.cpython-39.pyc
+    │           │   │   │   │   └── resolver.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── base.cpython-39.pyc
+    │           │   │   │   │   └── __init__.cpython-39.pyc
+    │           │   │   │   └── resolvelib
+    │           │   │   │       ├── base.py
+    │           │   │   │       ├── candidates.py
+    │           │   │   │       ├── factory.py
+    │           │   │   │       ├── found_candidates.py
+    │           │   │   │       ├── __init__.py
+    │           │   │   │       ├── provider.py
+    │           │   │   │       ├── __pycache__
+    │           │   │   │       │   ├── base.cpython-39.pyc
+    │           │   │   │       │   ├── candidates.cpython-39.pyc
+    │           │   │   │       │   ├── factory.cpython-39.pyc
+    │           │   │   │       │   ├── found_candidates.cpython-39.pyc
+    │           │   │   │       │   ├── __init__.cpython-39.pyc
+    │           │   │   │       │   ├── provider.cpython-39.pyc
+    │           │   │   │       │   ├── reporter.cpython-39.pyc
+    │           │   │   │       │   ├── requirements.cpython-39.pyc
+    │           │   │   │       │   └── resolver.cpython-39.pyc
+    │           │   │   │       ├── reporter.py
+    │           │   │   │       ├── requirements.py
+    │           │   │   │       └── resolver.py
+    │           │   │   ├── self_outdated_check.py
+    │           │   │   ├── utils
+    │           │   │   │   ├── appdirs.py
+    │           │   │   │   ├── compatibility_tags.py
+    │           │   │   │   ├── compat.py
+    │           │   │   │   ├── datetime.py
+    │           │   │   │   ├── deprecation.py
+    │           │   │   │   ├── direct_url_helpers.py
+    │           │   │   │   ├── distutils_args.py
+    │           │   │   │   ├── encoding.py
+    │           │   │   │   ├── entrypoints.py
+    │           │   │   │   ├── filesystem.py
+    │           │   │   │   ├── filetypes.py
+    │           │   │   │   ├── glibc.py
+    │           │   │   │   ├── hashes.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── inject_securetransport.py
+    │           │   │   │   ├── logging.py
+    │           │   │   │   ├── _log.py
+    │           │   │   │   ├── misc.py
+    │           │   │   │   ├── models.py
+    │           │   │   │   ├── packaging.py
+    │           │   │   │   ├── parallel.py
+    │           │   │   │   ├── pkg_resources.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── appdirs.cpython-39.pyc
+    │           │   │   │   │   ├── compat.cpython-39.pyc
+    │           │   │   │   │   ├── compatibility_tags.cpython-39.pyc
+    │           │   │   │   │   ├── datetime.cpython-39.pyc
+    │           │   │   │   │   ├── deprecation.cpython-39.pyc
+    │           │   │   │   │   ├── direct_url_helpers.cpython-39.pyc
+    │           │   │   │   │   ├── distutils_args.cpython-39.pyc
+    │           │   │   │   │   ├── encoding.cpython-39.pyc
+    │           │   │   │   │   ├── entrypoints.cpython-39.pyc
+    │           │   │   │   │   ├── filesystem.cpython-39.pyc
+    │           │   │   │   │   ├── filetypes.cpython-39.pyc
+    │           │   │   │   │   ├── glibc.cpython-39.pyc
+    │           │   │   │   │   ├── hashes.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── inject_securetransport.cpython-39.pyc
+    │           │   │   │   │   ├── _log.cpython-39.pyc
+    │           │   │   │   │   ├── logging.cpython-39.pyc
+    │           │   │   │   │   ├── misc.cpython-39.pyc
+    │           │   │   │   │   ├── models.cpython-39.pyc
+    │           │   │   │   │   ├── packaging.cpython-39.pyc
+    │           │   │   │   │   ├── parallel.cpython-39.pyc
+    │           │   │   │   │   ├── pkg_resources.cpython-39.pyc
+    │           │   │   │   │   ├── setuptools_build.cpython-39.pyc
+    │           │   │   │   │   ├── subprocess.cpython-39.pyc
+    │           │   │   │   │   ├── temp_dir.cpython-39.pyc
+    │           │   │   │   │   ├── unpacking.cpython-39.pyc
+    │           │   │   │   │   ├── urls.cpython-39.pyc
+    │           │   │   │   │   ├── virtualenv.cpython-39.pyc
+    │           │   │   │   │   └── wheel.cpython-39.pyc
+    │           │   │   │   ├── setuptools_build.py
+    │           │   │   │   ├── subprocess.py
+    │           │   │   │   ├── temp_dir.py
+    │           │   │   │   ├── unpacking.py
+    │           │   │   │   ├── urls.py
+    │           │   │   │   ├── virtualenv.py
+    │           │   │   │   └── wheel.py
+    │           │   │   ├── vcs
+    │           │   │   │   ├── bazaar.py
+    │           │   │   │   ├── git.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── mercurial.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── bazaar.cpython-39.pyc
+    │           │   │   │   │   ├── git.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── mercurial.cpython-39.pyc
+    │           │   │   │   │   ├── subversion.cpython-39.pyc
+    │           │   │   │   │   └── versioncontrol.cpython-39.pyc
+    │           │   │   │   ├── subversion.py
+    │           │   │   │   └── versioncontrol.py
+    │           │   │   └── wheel_builder.py
+    │           │   ├── __main__.py
+    │           │   ├── __pycache__
+    │           │   │   ├── __init__.cpython-39.pyc
+    │           │   │   └── __main__.cpython-39.pyc
+    │           │   ├── py.typed
+    │           │   └── _vendor
+    │           │       ├── appdirs.py
+    │           │       ├── cachecontrol
+    │           │       │   ├── adapter.py
+    │           │       │   ├── cache.py
+    │           │       │   ├── caches
+    │           │       │   │   ├── file_cache.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── file_cache.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   └── redis_cache.cpython-39.pyc
+    │           │       │   │   └── redis_cache.py
+    │           │       │   ├── _cmd.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── controller.py
+    │           │       │   ├── filewrapper.py
+    │           │       │   ├── heuristics.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── adapter.cpython-39.pyc
+    │           │       │   │   ├── cache.cpython-39.pyc
+    │           │       │   │   ├── _cmd.cpython-39.pyc
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── controller.cpython-39.pyc
+    │           │       │   │   ├── filewrapper.cpython-39.pyc
+    │           │       │   │   ├── heuristics.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── serialize.cpython-39.pyc
+    │           │       │   │   └── wrapper.cpython-39.pyc
+    │           │       │   ├── serialize.py
+    │           │       │   └── wrapper.py
+    │           │       ├── certifi
+    │           │       │   ├── cacert.pem
+    │           │       │   ├── core.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── __main__.py
+    │           │       │   └── __pycache__
+    │           │       │       ├── core.cpython-39.pyc
+    │           │       │       ├── __init__.cpython-39.pyc
+    │           │       │       └── __main__.cpython-39.pyc
+    │           │       ├── chardet
+    │           │       │   ├── big5freq.py
+    │           │       │   ├── big5prober.py
+    │           │       │   ├── chardistribution.py
+    │           │       │   ├── charsetgroupprober.py
+    │           │       │   ├── charsetprober.py
+    │           │       │   ├── cli
+    │           │       │   │   ├── chardetect.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── chardetect.cpython-39.pyc
+    │           │       │   │       └── __init__.cpython-39.pyc
+    │           │       │   ├── codingstatemachine.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── cp949prober.py
+    │           │       │   ├── enums.py
+    │           │       │   ├── escprober.py
+    │           │       │   ├── escsm.py
+    │           │       │   ├── eucjpprober.py
+    │           │       │   ├── euckrfreq.py
+    │           │       │   ├── euckrprober.py
+    │           │       │   ├── euctwfreq.py
+    │           │       │   ├── euctwprober.py
+    │           │       │   ├── gb2312freq.py
+    │           │       │   ├── gb2312prober.py
+    │           │       │   ├── hebrewprober.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── jisfreq.py
+    │           │       │   ├── jpcntx.py
+    │           │       │   ├── langbulgarianmodel.py
+    │           │       │   ├── langgreekmodel.py
+    │           │       │   ├── langhebrewmodel.py
+    │           │       │   ├── langhungarianmodel.py
+    │           │       │   ├── langrussianmodel.py
+    │           │       │   ├── langthaimodel.py
+    │           │       │   ├── langturkishmodel.py
+    │           │       │   ├── latin1prober.py
+    │           │       │   ├── mbcharsetprober.py
+    │           │       │   ├── mbcsgroupprober.py
+    │           │       │   ├── mbcssm.py
+    │           │       │   ├── metadata
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── languages.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── __init__.cpython-39.pyc
+    │           │       │   │       └── languages.cpython-39.pyc
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── big5freq.cpython-39.pyc
+    │           │       │   │   ├── big5prober.cpython-39.pyc
+    │           │       │   │   ├── chardistribution.cpython-39.pyc
+    │           │       │   │   ├── charsetgroupprober.cpython-39.pyc
+    │           │       │   │   ├── charsetprober.cpython-39.pyc
+    │           │       │   │   ├── codingstatemachine.cpython-39.pyc
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── cp949prober.cpython-39.pyc
+    │           │       │   │   ├── enums.cpython-39.pyc
+    │           │       │   │   ├── escprober.cpython-39.pyc
+    │           │       │   │   ├── escsm.cpython-39.pyc
+    │           │       │   │   ├── eucjpprober.cpython-39.pyc
+    │           │       │   │   ├── euckrfreq.cpython-39.pyc
+    │           │       │   │   ├── euckrprober.cpython-39.pyc
+    │           │       │   │   ├── euctwfreq.cpython-39.pyc
+    │           │       │   │   ├── euctwprober.cpython-39.pyc
+    │           │       │   │   ├── gb2312freq.cpython-39.pyc
+    │           │       │   │   ├── gb2312prober.cpython-39.pyc
+    │           │       │   │   ├── hebrewprober.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── jisfreq.cpython-39.pyc
+    │           │       │   │   ├── jpcntx.cpython-39.pyc
+    │           │       │   │   ├── langbulgarianmodel.cpython-39.pyc
+    │           │       │   │   ├── langgreekmodel.cpython-39.pyc
+    │           │       │   │   ├── langhebrewmodel.cpython-39.pyc
+    │           │       │   │   ├── langhungarianmodel.cpython-39.pyc
+    │           │       │   │   ├── langrussianmodel.cpython-39.pyc
+    │           │       │   │   ├── langthaimodel.cpython-39.pyc
+    │           │       │   │   ├── langturkishmodel.cpython-39.pyc
+    │           │       │   │   ├── latin1prober.cpython-39.pyc
+    │           │       │   │   ├── mbcharsetprober.cpython-39.pyc
+    │           │       │   │   ├── mbcsgroupprober.cpython-39.pyc
+    │           │       │   │   ├── mbcssm.cpython-39.pyc
+    │           │       │   │   ├── sbcharsetprober.cpython-39.pyc
+    │           │       │   │   ├── sbcsgroupprober.cpython-39.pyc
+    │           │       │   │   ├── sjisprober.cpython-39.pyc
+    │           │       │   │   ├── universaldetector.cpython-39.pyc
+    │           │       │   │   ├── utf8prober.cpython-39.pyc
+    │           │       │   │   └── version.cpython-39.pyc
+    │           │       │   ├── sbcharsetprober.py
+    │           │       │   ├── sbcsgroupprober.py
+    │           │       │   ├── sjisprober.py
+    │           │       │   ├── universaldetector.py
+    │           │       │   ├── utf8prober.py
+    │           │       │   └── version.py
+    │           │       ├── colorama
+    │           │       │   ├── ansi.py
+    │           │       │   ├── ansitowin32.py
+    │           │       │   ├── initialise.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── ansi.cpython-39.pyc
+    │           │       │   │   ├── ansitowin32.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── initialise.cpython-39.pyc
+    │           │       │   │   ├── win32.cpython-39.pyc
+    │           │       │   │   └── winterm.cpython-39.pyc
+    │           │       │   ├── win32.py
+    │           │       │   └── winterm.py
+    │           │       ├── distlib
+    │           │       │   ├── _backport
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── misc.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   ├── misc.cpython-39.pyc
+    │           │       │   │   │   ├── shutil.cpython-39.pyc
+    │           │       │   │   │   ├── sysconfig.cpython-39.pyc
+    │           │       │   │   │   └── tarfile.cpython-39.pyc
+    │           │       │   │   ├── shutil.py
+    │           │       │   │   ├── sysconfig.cfg
+    │           │       │   │   ├── sysconfig.py
+    │           │       │   │   └── tarfile.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── database.py
+    │           │       │   ├── index.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── locators.py
+    │           │       │   ├── manifest.py
+    │           │       │   ├── markers.py
+    │           │       │   ├── metadata.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── database.cpython-39.pyc
+    │           │       │   │   ├── index.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── locators.cpython-39.pyc
+    │           │       │   │   ├── manifest.cpython-39.pyc
+    │           │       │   │   ├── markers.cpython-39.pyc
+    │           │       │   │   ├── metadata.cpython-39.pyc
+    │           │       │   │   ├── resources.cpython-39.pyc
+    │           │       │   │   ├── scripts.cpython-39.pyc
+    │           │       │   │   ├── util.cpython-39.pyc
+    │           │       │   │   ├── version.cpython-39.pyc
+    │           │       │   │   └── wheel.cpython-39.pyc
+    │           │       │   ├── resources.py
+    │           │       │   ├── scripts.py
+    │           │       │   ├── t32.exe
+    │           │       │   ├── t64.exe
+    │           │       │   ├── util.py
+    │           │       │   ├── version.py
+    │           │       │   ├── w32.exe
+    │           │       │   ├── w64.exe
+    │           │       │   └── wheel.py
+    │           │       ├── distro.py
+    │           │       ├── html5lib
+    │           │       │   ├── constants.py
+    │           │       │   ├── filters
+    │           │       │   │   ├── alphabeticalattributes.py
+    │           │       │   │   ├── base.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── inject_meta_charset.py
+    │           │       │   │   ├── lint.py
+    │           │       │   │   ├── optionaltags.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── alphabeticalattributes.cpython-39.pyc
+    │           │       │   │   │   ├── base.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   ├── inject_meta_charset.cpython-39.pyc
+    │           │       │   │   │   ├── lint.cpython-39.pyc
+    │           │       │   │   │   ├── optionaltags.cpython-39.pyc
+    │           │       │   │   │   ├── sanitizer.cpython-39.pyc
+    │           │       │   │   │   └── whitespace.cpython-39.pyc
+    │           │       │   │   ├── sanitizer.py
+    │           │       │   │   └── whitespace.py
+    │           │       │   ├── html5parser.py
+    │           │       │   ├── _ihatexml.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── _inputstream.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── constants.cpython-39.pyc
+    │           │       │   │   ├── html5parser.cpython-39.pyc
+    │           │       │   │   ├── _ihatexml.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── _inputstream.cpython-39.pyc
+    │           │       │   │   ├── serializer.cpython-39.pyc
+    │           │       │   │   ├── _tokenizer.cpython-39.pyc
+    │           │       │   │   └── _utils.cpython-39.pyc
+    │           │       │   ├── serializer.py
+    │           │       │   ├── _tokenizer.py
+    │           │       │   ├── treeadapters
+    │           │       │   │   ├── genshi.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── genshi.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   └── sax.cpython-39.pyc
+    │           │       │   │   └── sax.py
+    │           │       │   ├── treebuilders
+    │           │       │   │   ├── base.py
+    │           │       │   │   ├── dom.py
+    │           │       │   │   ├── etree_lxml.py
+    │           │       │   │   ├── etree.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── base.cpython-39.pyc
+    │           │       │   │       ├── dom.cpython-39.pyc
+    │           │       │   │       ├── etree.cpython-39.pyc
+    │           │       │   │       ├── etree_lxml.cpython-39.pyc
+    │           │       │   │       └── __init__.cpython-39.pyc
+    │           │       │   ├── treewalkers
+    │           │       │   │   ├── base.py
+    │           │       │   │   ├── dom.py
+    │           │       │   │   ├── etree_lxml.py
+    │           │       │   │   ├── etree.py
+    │           │       │   │   ├── genshi.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── base.cpython-39.pyc
+    │           │       │   │       ├── dom.cpython-39.pyc
+    │           │       │   │       ├── etree.cpython-39.pyc
+    │           │       │   │       ├── etree_lxml.cpython-39.pyc
+    │           │       │   │       ├── genshi.cpython-39.pyc
+    │           │       │   │       └── __init__.cpython-39.pyc
+    │           │       │   ├── _trie
+    │           │       │   │   ├── _base.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── _base.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   └── py.cpython-39.pyc
+    │           │       │   │   └── py.py
+    │           │       │   └── _utils.py
+    │           │       ├── idna
+    │           │       │   ├── codec.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── core.py
+    │           │       │   ├── idnadata.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── intranges.py
+    │           │       │   ├── package_data.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── codec.cpython-39.pyc
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── core.cpython-39.pyc
+    │           │       │   │   ├── idnadata.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── intranges.cpython-39.pyc
+    │           │       │   │   ├── package_data.cpython-39.pyc
+    │           │       │   │   └── uts46data.cpython-39.pyc
+    │           │       │   └── uts46data.py
+    │           │       ├── __init__.py
+    │           │       ├── msgpack
+    │           │       │   ├── exceptions.py
+    │           │       │   ├── ext.py
+    │           │       │   ├── fallback.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── exceptions.cpython-39.pyc
+    │           │       │   │   ├── ext.cpython-39.pyc
+    │           │       │   │   ├── fallback.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   └── _version.cpython-39.pyc
+    │           │       │   └── _version.py
+    │           │       ├── packaging
+    │           │       │   ├── __about__.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── _manylinux.py
+    │           │       │   ├── markers.py
+    │           │       │   ├── _musllinux.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── __about__.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── _manylinux.cpython-39.pyc
+    │           │       │   │   ├── markers.cpython-39.pyc
+    │           │       │   │   ├── _musllinux.cpython-39.pyc
+    │           │       │   │   ├── requirements.cpython-39.pyc
+    │           │       │   │   ├── specifiers.cpython-39.pyc
+    │           │       │   │   ├── _structures.cpython-39.pyc
+    │           │       │   │   ├── tags.cpython-39.pyc
+    │           │       │   │   ├── utils.cpython-39.pyc
+    │           │       │   │   └── version.cpython-39.pyc
+    │           │       │   ├── requirements.py
+    │           │       │   ├── specifiers.py
+    │           │       │   ├── _structures.py
+    │           │       │   ├── tags.py
+    │           │       │   ├── utils.py
+    │           │       │   └── version.py
+    │           │       ├── pep517
+    │           │       │   ├── build.py
+    │           │       │   ├── check.py
+    │           │       │   ├── colorlog.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── dirtools.py
+    │           │       │   ├── envbuild.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── in_process
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── _in_process.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── __init__.cpython-39.pyc
+    │           │       │   │       └── _in_process.cpython-39.pyc
+    │           │       │   ├── meta.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── build.cpython-39.pyc
+    │           │       │   │   ├── check.cpython-39.pyc
+    │           │       │   │   ├── colorlog.cpython-39.pyc
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── dirtools.cpython-39.pyc
+    │           │       │   │   ├── envbuild.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── meta.cpython-39.pyc
+    │           │       │   │   └── wrappers.cpython-39.pyc
+    │           │       │   └── wrappers.py
+    │           │       ├── pkg_resources
+    │           │       │   ├── __init__.py
+    │           │       │   ├── py31compat.py
+    │           │       │   └── __pycache__
+    │           │       │       ├── __init__.cpython-39.pyc
+    │           │       │       └── py31compat.cpython-39.pyc
+    │           │       ├── progress
+    │           │       │   ├── bar.py
+    │           │       │   ├── counter.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── bar.cpython-39.pyc
+    │           │       │   │   ├── counter.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   └── spinner.cpython-39.pyc
+    │           │       │   └── spinner.py
+    │           │       ├── __pycache__
+    │           │       │   ├── appdirs.cpython-39.pyc
+    │           │       │   ├── distro.cpython-39.pyc
+    │           │       │   ├── __init__.cpython-39.pyc
+    │           │       │   ├── pyparsing.cpython-39.pyc
+    │           │       │   └── six.cpython-39.pyc
+    │           │       ├── pyparsing.py
+    │           │       ├── requests
+    │           │       │   ├── adapters.py
+    │           │       │   ├── api.py
+    │           │       │   ├── auth.py
+    │           │       │   ├── certs.py
+    │           │       │   ├── compat.py
+    │           │       │   ├── cookies.py
+    │           │       │   ├── exceptions.py
+    │           │       │   ├── help.py
+    │           │       │   ├── hooks.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── _internal_utils.py
+    │           │       │   ├── models.py
+    │           │       │   ├── packages.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── adapters.cpython-39.pyc
+    │           │       │   │   ├── api.cpython-39.pyc
+    │           │       │   │   ├── auth.cpython-39.pyc
+    │           │       │   │   ├── certs.cpython-39.pyc
+    │           │       │   │   ├── compat.cpython-39.pyc
+    │           │       │   │   ├── cookies.cpython-39.pyc
+    │           │       │   │   ├── exceptions.cpython-39.pyc
+    │           │       │   │   ├── help.cpython-39.pyc
+    │           │       │   │   ├── hooks.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── _internal_utils.cpython-39.pyc
+    │           │       │   │   ├── models.cpython-39.pyc
+    │           │       │   │   ├── packages.cpython-39.pyc
+    │           │       │   │   ├── sessions.cpython-39.pyc
+    │           │       │   │   ├── status_codes.cpython-39.pyc
+    │           │       │   │   ├── structures.cpython-39.pyc
+    │           │       │   │   ├── utils.cpython-39.pyc
+    │           │       │   │   └── __version__.cpython-39.pyc
+    │           │       │   ├── sessions.py
+    │           │       │   ├── status_codes.py
+    │           │       │   ├── structures.py
+    │           │       │   ├── utils.py
+    │           │       │   └── __version__.py
+    │           │       ├── resolvelib
+    │           │       │   ├── compat
+    │           │       │   │   ├── collections_abc.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   └── __pycache__
+    │           │       │   │       ├── collections_abc.cpython-39.pyc
+    │           │       │   │       └── __init__.cpython-39.pyc
+    │           │       │   ├── __init__.py
+    │           │       │   ├── providers.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── providers.cpython-39.pyc
+    │           │       │   │   ├── reporters.cpython-39.pyc
+    │           │       │   │   ├── resolvers.cpython-39.pyc
+    │           │       │   │   └── structs.cpython-39.pyc
+    │           │       │   ├── reporters.py
+    │           │       │   ├── resolvers.py
+    │           │       │   └── structs.py
+    │           │       ├── six.py
+    │           │       ├── tenacity
+    │           │       │   ├── after.py
+    │           │       │   ├── _asyncio.py
+    │           │       │   ├── before.py
+    │           │       │   ├── before_sleep.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── nap.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── after.cpython-39.pyc
+    │           │       │   │   ├── _asyncio.cpython-39.pyc
+    │           │       │   │   ├── before.cpython-39.pyc
+    │           │       │   │   ├── before_sleep.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── nap.cpython-39.pyc
+    │           │       │   │   ├── retry.cpython-39.pyc
+    │           │       │   │   ├── stop.cpython-39.pyc
+    │           │       │   │   ├── tornadoweb.cpython-39.pyc
+    │           │       │   │   ├── _utils.cpython-39.pyc
+    │           │       │   │   └── wait.cpython-39.pyc
+    │           │       │   ├── retry.py
+    │           │       │   ├── stop.py
+    │           │       │   ├── tornadoweb.py
+    │           │       │   ├── _utils.py
+    │           │       │   └── wait.py
+    │           │       ├── tomli
+    │           │       │   ├── __init__.py
+    │           │       │   ├── _parser.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── _parser.cpython-39.pyc
+    │           │       │   │   └── _re.cpython-39.pyc
+    │           │       │   └── _re.py
+    │           │       ├── urllib3
+    │           │       │   ├── _collections.py
+    │           │       │   ├── connectionpool.py
+    │           │       │   ├── connection.py
+    │           │       │   ├── contrib
+    │           │       │   │   ├── _appengine_environ.py
+    │           │       │   │   ├── appengine.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── ntlmpool.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── appengine.cpython-39.pyc
+    │           │       │   │   │   ├── _appengine_environ.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   ├── ntlmpool.cpython-39.pyc
+    │           │       │   │   │   ├── pyopenssl.cpython-39.pyc
+    │           │       │   │   │   ├── securetransport.cpython-39.pyc
+    │           │       │   │   │   └── socks.cpython-39.pyc
+    │           │       │   │   ├── pyopenssl.py
+    │           │       │   │   ├── _securetransport
+    │           │       │   │   │   ├── bindings.py
+    │           │       │   │   │   ├── __init__.py
+    │           │       │   │   │   ├── low_level.py
+    │           │       │   │   │   └── __pycache__
+    │           │       │   │   │       ├── bindings.cpython-39.pyc
+    │           │       │   │   │       ├── __init__.cpython-39.pyc
+    │           │       │   │   │       └── low_level.cpython-39.pyc
+    │           │       │   │   ├── securetransport.py
+    │           │       │   │   └── socks.py
+    │           │       │   ├── exceptions.py
+    │           │       │   ├── fields.py
+    │           │       │   ├── filepost.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── packages
+    │           │       │   │   ├── backports
+    │           │       │   │   │   ├── __init__.py
+    │           │       │   │   │   ├── makefile.py
+    │           │       │   │   │   └── __pycache__
+    │           │       │   │   │       ├── __init__.cpython-39.pyc
+    │           │       │   │   │       └── makefile.cpython-39.pyc
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   └── six.cpython-39.pyc
+    │           │       │   │   ├── six.py
+    │           │       │   │   └── ssl_match_hostname
+    │           │       │   │       ├── _implementation.py
+    │           │       │   │       ├── __init__.py
+    │           │       │   │       └── __pycache__
+    │           │       │   │           ├── _implementation.cpython-39.pyc
+    │           │       │   │           └── __init__.cpython-39.pyc
+    │           │       │   ├── poolmanager.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── _collections.cpython-39.pyc
+    │           │       │   │   ├── connection.cpython-39.pyc
+    │           │       │   │   ├── connectionpool.cpython-39.pyc
+    │           │       │   │   ├── exceptions.cpython-39.pyc
+    │           │       │   │   ├── fields.cpython-39.pyc
+    │           │       │   │   ├── filepost.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── poolmanager.cpython-39.pyc
+    │           │       │   │   ├── request.cpython-39.pyc
+    │           │       │   │   ├── response.cpython-39.pyc
+    │           │       │   │   └── _version.cpython-39.pyc
+    │           │       │   ├── request.py
+    │           │       │   ├── response.py
+    │           │       │   ├── util
+    │           │       │   │   ├── connection.py
+    │           │       │   │   ├── __init__.py
+    │           │       │   │   ├── proxy.py
+    │           │       │   │   ├── __pycache__
+    │           │       │   │   │   ├── connection.cpython-39.pyc
+    │           │       │   │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   │   ├── proxy.cpython-39.pyc
+    │           │       │   │   │   ├── queue.cpython-39.pyc
+    │           │       │   │   │   ├── request.cpython-39.pyc
+    │           │       │   │   │   ├── response.cpython-39.pyc
+    │           │       │   │   │   ├── retry.cpython-39.pyc
+    │           │       │   │   │   ├── ssl_.cpython-39.pyc
+    │           │       │   │   │   ├── ssltransport.cpython-39.pyc
+    │           │       │   │   │   ├── timeout.cpython-39.pyc
+    │           │       │   │   │   ├── url.cpython-39.pyc
+    │           │       │   │   │   └── wait.cpython-39.pyc
+    │           │       │   │   ├── queue.py
+    │           │       │   │   ├── request.py
+    │           │       │   │   ├── response.py
+    │           │       │   │   ├── retry.py
+    │           │       │   │   ├── ssl_.py
+    │           │       │   │   ├── ssltransport.py
+    │           │       │   │   ├── timeout.py
+    │           │       │   │   ├── url.py
+    │           │       │   │   └── wait.py
+    │           │       │   └── _version.py
+    │           │       ├── vendor.txt
+    │           │       └── webencodings
+    │           │           ├── __init__.py
+    │           │           ├── labels.py
+    │           │           ├── mklabels.py
+    │           │           ├── __pycache__
+    │           │           │   ├── __init__.cpython-39.pyc
+    │           │           │   ├── labels.cpython-39.pyc
+    │           │           │   ├── mklabels.cpython-39.pyc
+    │           │           │   ├── tests.cpython-39.pyc
+    │           │           │   └── x_user_defined.cpython-39.pyc
+    │           │           ├── tests.py
+    │           │           └── x_user_defined.py
+    │           ├── pip-21.2.3.dist-info
+    │           │   ├── entry_points.txt
+    │           │   ├── INSTALLER
+    │           │   ├── LICENSE.txt
+    │           │   ├── METADATA
+    │           │   ├── RECORD
+    │           │   ├── REQUESTED
+    │           │   ├── top_level.txt
+    │           │   └── WHEEL
+    │           ├── pkg_resources
+    │           │   ├── extern
+    │           │   │   ├── __init__.py
+    │           │   │   └── __pycache__
+    │           │   │       └── __init__.cpython-39.pyc
+    │           │   ├── __init__.py
+    │           │   ├── __pycache__
+    │           │   │   └── __init__.cpython-39.pyc
+    │           │   ├── tests
+    │           │   │   └── data
+    │           │   │       └── my-test-package-source
+    │           │   │           ├── __pycache__
+    │           │   │           │   └── setup.cpython-39.pyc
+    │           │   │           └── setup.py
+    │           │   └── _vendor
+    │           │       ├── appdirs.py
+    │           │       ├── __init__.py
+    │           │       ├── packaging
+    │           │       │   ├── __about__.py
+    │           │       │   ├── _compat.py
+    │           │       │   ├── __init__.py
+    │           │       │   ├── markers.py
+    │           │       │   ├── __pycache__
+    │           │       │   │   ├── __about__.cpython-39.pyc
+    │           │       │   │   ├── _compat.cpython-39.pyc
+    │           │       │   │   ├── __init__.cpython-39.pyc
+    │           │       │   │   ├── markers.cpython-39.pyc
+    │           │       │   │   ├── requirements.cpython-39.pyc
+    │           │       │   │   ├── specifiers.cpython-39.pyc
+    │           │       │   │   ├── _structures.cpython-39.pyc
+    │           │       │   │   ├── tags.cpython-39.pyc
+    │           │       │   │   ├── _typing.cpython-39.pyc
+    │           │       │   │   ├── utils.cpython-39.pyc
+    │           │       │   │   └── version.cpython-39.pyc
+    │           │       │   ├── requirements.py
+    │           │       │   ├── specifiers.py
+    │           │       │   ├── _structures.py
+    │           │       │   ├── tags.py
+    │           │       │   ├── _typing.py
+    │           │       │   ├── utils.py
+    │           │       │   └── version.py
+    │           │       ├── __pycache__
+    │           │       │   ├── appdirs.cpython-39.pyc
+    │           │       │   ├── __init__.cpython-39.pyc
+    │           │       │   └── pyparsing.cpython-39.pyc
+    │           │       └── pyparsing.py
+    │           ├── setuptools
+    │           │   ├── archive_util.py
+    │           │   ├── build_meta.py
+    │           │   ├── cli-32.exe
+    │           │   ├── cli-64.exe
+    │           │   ├── cli.exe
+    │           │   ├── command
+    │           │   │   ├── alias.py
+    │           │   │   ├── bdist_egg.py
+    │           │   │   ├── bdist_rpm.py
+    │           │   │   ├── build_clib.py
+    │           │   │   ├── build_ext.py
+    │           │   │   ├── build_py.py
+    │           │   │   ├── develop.py
+    │           │   │   ├── dist_info.py
+    │           │   │   ├── easy_install.py
+    │           │   │   ├── egg_info.py
+    │           │   │   ├── __init__.py
+    │           │   │   ├── install_egg_info.py
+    │           │   │   ├── install_lib.py
+    │           │   │   ├── install.py
+    │           │   │   ├── install_scripts.py
+    │           │   │   ├── launcher manifest.xml
+    │           │   │   ├── py36compat.py
+    │           │   │   ├── __pycache__
+    │           │   │   │   ├── alias.cpython-39.pyc
+    │           │   │   │   ├── bdist_egg.cpython-39.pyc
+    │           │   │   │   ├── bdist_rpm.cpython-39.pyc
+    │           │   │   │   ├── build_clib.cpython-39.pyc
+    │           │   │   │   ├── build_ext.cpython-39.pyc
+    │           │   │   │   ├── build_py.cpython-39.pyc
+    │           │   │   │   ├── develop.cpython-39.pyc
+    │           │   │   │   ├── dist_info.cpython-39.pyc
+    │           │   │   │   ├── easy_install.cpython-39.pyc
+    │           │   │   │   ├── egg_info.cpython-39.pyc
+    │           │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   ├── install.cpython-39.pyc
+    │           │   │   │   ├── install_egg_info.cpython-39.pyc
+    │           │   │   │   ├── install_lib.cpython-39.pyc
+    │           │   │   │   ├── install_scripts.cpython-39.pyc
+    │           │   │   │   ├── py36compat.cpython-39.pyc
+    │           │   │   │   ├── register.cpython-39.pyc
+    │           │   │   │   ├── rotate.cpython-39.pyc
+    │           │   │   │   ├── saveopts.cpython-39.pyc
+    │           │   │   │   ├── sdist.cpython-39.pyc
+    │           │   │   │   ├── setopt.cpython-39.pyc
+    │           │   │   │   ├── test.cpython-39.pyc
+    │           │   │   │   ├── upload.cpython-39.pyc
+    │           │   │   │   └── upload_docs.cpython-39.pyc
+    │           │   │   ├── register.py
+    │           │   │   ├── rotate.py
+    │           │   │   ├── saveopts.py
+    │           │   │   ├── sdist.py
+    │           │   │   ├── setopt.py
+    │           │   │   ├── test.py
+    │           │   │   ├── upload_docs.py
+    │           │   │   └── upload.py
+    │           │   ├── config.py
+    │           │   ├── depends.py
+    │           │   ├── _deprecation_warning.py
+    │           │   ├── dep_util.py
+    │           │   ├── dist.py
+    │           │   ├── _distutils
+    │           │   │   ├── archive_util.py
+    │           │   │   ├── bcppcompiler.py
+    │           │   │   ├── ccompiler.py
+    │           │   │   ├── cmd.py
+    │           │   │   ├── command
+    │           │   │   │   ├── bdist_dumb.py
+    │           │   │   │   ├── bdist_msi.py
+    │           │   │   │   ├── bdist.py
+    │           │   │   │   ├── bdist_rpm.py
+    │           │   │   │   ├── bdist_wininst.py
+    │           │   │   │   ├── build_clib.py
+    │           │   │   │   ├── build_ext.py
+    │           │   │   │   ├── build.py
+    │           │   │   │   ├── build_py.py
+    │           │   │   │   ├── build_scripts.py
+    │           │   │   │   ├── check.py
+    │           │   │   │   ├── clean.py
+    │           │   │   │   ├── config.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── install_data.py
+    │           │   │   │   ├── install_egg_info.py
+    │           │   │   │   ├── install_headers.py
+    │           │   │   │   ├── install_lib.py
+    │           │   │   │   ├── install.py
+    │           │   │   │   ├── install_scripts.py
+    │           │   │   │   ├── py37compat.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── bdist.cpython-39.pyc
+    │           │   │   │   │   ├── bdist_dumb.cpython-39.pyc
+    │           │   │   │   │   ├── bdist_msi.cpython-39.pyc
+    │           │   │   │   │   ├── bdist_rpm.cpython-39.pyc
+    │           │   │   │   │   ├── bdist_wininst.cpython-39.pyc
+    │           │   │   │   │   ├── build_clib.cpython-39.pyc
+    │           │   │   │   │   ├── build.cpython-39.pyc
+    │           │   │   │   │   ├── build_ext.cpython-39.pyc
+    │           │   │   │   │   ├── build_py.cpython-39.pyc
+    │           │   │   │   │   ├── build_scripts.cpython-39.pyc
+    │           │   │   │   │   ├── check.cpython-39.pyc
+    │           │   │   │   │   ├── clean.cpython-39.pyc
+    │           │   │   │   │   ├── config.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── install.cpython-39.pyc
+    │           │   │   │   │   ├── install_data.cpython-39.pyc
+    │           │   │   │   │   ├── install_egg_info.cpython-39.pyc
+    │           │   │   │   │   ├── install_headers.cpython-39.pyc
+    │           │   │   │   │   ├── install_lib.cpython-39.pyc
+    │           │   │   │   │   ├── install_scripts.cpython-39.pyc
+    │           │   │   │   │   ├── py37compat.cpython-39.pyc
+    │           │   │   │   │   ├── register.cpython-39.pyc
+    │           │   │   │   │   ├── sdist.cpython-39.pyc
+    │           │   │   │   │   └── upload.cpython-39.pyc
+    │           │   │   │   ├── register.py
+    │           │   │   │   ├── sdist.py
+    │           │   │   │   └── upload.py
+    │           │   │   ├── config.py
+    │           │   │   ├── core.py
+    │           │   │   ├── cygwinccompiler.py
+    │           │   │   ├── debug.py
+    │           │   │   ├── dep_util.py
+    │           │   │   ├── dir_util.py
+    │           │   │   ├── dist.py
+    │           │   │   ├── errors.py
+    │           │   │   ├── extension.py
+    │           │   │   ├── fancy_getopt.py
+    │           │   │   ├── filelist.py
+    │           │   │   ├── file_util.py
+    │           │   │   ├── __init__.py
+    │           │   │   ├── log.py
+    │           │   │   ├── msvc9compiler.py
+    │           │   │   ├── _msvccompiler.py
+    │           │   │   ├── msvccompiler.py
+    │           │   │   ├── py35compat.py
+    │           │   │   ├── py38compat.py
+    │           │   │   ├── __pycache__
+    │           │   │   │   ├── archive_util.cpython-39.pyc
+    │           │   │   │   ├── bcppcompiler.cpython-39.pyc
+    │           │   │   │   ├── ccompiler.cpython-39.pyc
+    │           │   │   │   ├── cmd.cpython-39.pyc
+    │           │   │   │   ├── config.cpython-39.pyc
+    │           │   │   │   ├── core.cpython-39.pyc
+    │           │   │   │   ├── cygwinccompiler.cpython-39.pyc
+    │           │   │   │   ├── debug.cpython-39.pyc
+    │           │   │   │   ├── dep_util.cpython-39.pyc
+    │           │   │   │   ├── dir_util.cpython-39.pyc
+    │           │   │   │   ├── dist.cpython-39.pyc
+    │           │   │   │   ├── errors.cpython-39.pyc
+    │           │   │   │   ├── extension.cpython-39.pyc
+    │           │   │   │   ├── fancy_getopt.cpython-39.pyc
+    │           │   │   │   ├── filelist.cpython-39.pyc
+    │           │   │   │   ├── file_util.cpython-39.pyc
+    │           │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   ├── log.cpython-39.pyc
+    │           │   │   │   ├── msvc9compiler.cpython-39.pyc
+    │           │   │   │   ├── _msvccompiler.cpython-39.pyc
+    │           │   │   │   ├── msvccompiler.cpython-39.pyc
+    │           │   │   │   ├── py35compat.cpython-39.pyc
+    │           │   │   │   ├── py38compat.cpython-39.pyc
+    │           │   │   │   ├── spawn.cpython-39.pyc
+    │           │   │   │   ├── sysconfig.cpython-39.pyc
+    │           │   │   │   ├── text_file.cpython-39.pyc
+    │           │   │   │   ├── unixccompiler.cpython-39.pyc
+    │           │   │   │   ├── util.cpython-39.pyc
+    │           │   │   │   ├── version.cpython-39.pyc
+    │           │   │   │   └── versionpredicate.cpython-39.pyc
+    │           │   │   ├── spawn.py
+    │           │   │   ├── sysconfig.py
+    │           │   │   ├── text_file.py
+    │           │   │   ├── unixccompiler.py
+    │           │   │   ├── util.py
+    │           │   │   ├── versionpredicate.py
+    │           │   │   └── version.py
+    │           │   ├── errors.py
+    │           │   ├── extension.py
+    │           │   ├── extern
+    │           │   │   ├── __init__.py
+    │           │   │   └── __pycache__
+    │           │   │       └── __init__.cpython-39.pyc
+    │           │   ├── glob.py
+    │           │   ├── gui-32.exe
+    │           │   ├── gui-64.exe
+    │           │   ├── gui.exe
+    │           │   ├── _imp.py
+    │           │   ├── __init__.py
+    │           │   ├── installer.py
+    │           │   ├── launch.py
+    │           │   ├── lib2to3_ex.py
+    │           │   ├── monkey.py
+    │           │   ├── msvc.py
+    │           │   ├── namespaces.py
+    │           │   ├── package_index.py
+    │           │   ├── py34compat.py
+    │           │   ├── __pycache__
+    │           │   │   ├── archive_util.cpython-39.pyc
+    │           │   │   ├── build_meta.cpython-39.pyc
+    │           │   │   ├── config.cpython-39.pyc
+    │           │   │   ├── depends.cpython-39.pyc
+    │           │   │   ├── _deprecation_warning.cpython-39.pyc
+    │           │   │   ├── dep_util.cpython-39.pyc
+    │           │   │   ├── dist.cpython-39.pyc
+    │           │   │   ├── errors.cpython-39.pyc
+    │           │   │   ├── extension.cpython-39.pyc
+    │           │   │   ├── glob.cpython-39.pyc
+    │           │   │   ├── _imp.cpython-39.pyc
+    │           │   │   ├── __init__.cpython-39.pyc
+    │           │   │   ├── installer.cpython-39.pyc
+    │           │   │   ├── launch.cpython-39.pyc
+    │           │   │   ├── lib2to3_ex.cpython-39.pyc
+    │           │   │   ├── monkey.cpython-39.pyc
+    │           │   │   ├── msvc.cpython-39.pyc
+    │           │   │   ├── namespaces.cpython-39.pyc
+    │           │   │   ├── package_index.cpython-39.pyc
+    │           │   │   ├── py34compat.cpython-39.pyc
+    │           │   │   ├── sandbox.cpython-39.pyc
+    │           │   │   ├── unicode_utils.cpython-39.pyc
+    │           │   │   ├── version.cpython-39.pyc
+    │           │   │   ├── wheel.cpython-39.pyc
+    │           │   │   └── windows_support.cpython-39.pyc
+    │           │   ├── sandbox.py
+    │           │   ├── script (dev).tmpl
+    │           │   ├── script.tmpl
+    │           │   ├── unicode_utils.py
+    │           │   ├── _vendor
+    │           │   │   ├── __init__.py
+    │           │   │   ├── more_itertools
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── more.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── more.cpython-39.pyc
+    │           │   │   │   │   └── recipes.cpython-39.pyc
+    │           │   │   │   └── recipes.py
+    │           │   │   ├── ordered_set.py
+    │           │   │   ├── packaging
+    │           │   │   │   ├── __about__.py
+    │           │   │   │   ├── _compat.py
+    │           │   │   │   ├── __init__.py
+    │           │   │   │   ├── markers.py
+    │           │   │   │   ├── __pycache__
+    │           │   │   │   │   ├── __about__.cpython-39.pyc
+    │           │   │   │   │   ├── _compat.cpython-39.pyc
+    │           │   │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   │   ├── markers.cpython-39.pyc
+    │           │   │   │   │   ├── requirements.cpython-39.pyc
+    │           │   │   │   │   ├── specifiers.cpython-39.pyc
+    │           │   │   │   │   ├── _structures.cpython-39.pyc
+    │           │   │   │   │   ├── tags.cpython-39.pyc
+    │           │   │   │   │   ├── _typing.cpython-39.pyc
+    │           │   │   │   │   ├── utils.cpython-39.pyc
+    │           │   │   │   │   └── version.cpython-39.pyc
+    │           │   │   │   ├── requirements.py
+    │           │   │   │   ├── specifiers.py
+    │           │   │   │   ├── _structures.py
+    │           │   │   │   ├── tags.py
+    │           │   │   │   ├── _typing.py
+    │           │   │   │   ├── utils.py
+    │           │   │   │   └── version.py
+    │           │   │   ├── __pycache__
+    │           │   │   │   ├── __init__.cpython-39.pyc
+    │           │   │   │   ├── ordered_set.cpython-39.pyc
+    │           │   │   │   └── pyparsing.cpython-39.pyc
+    │           │   │   └── pyparsing.py
+    │           │   ├── version.py
+    │           │   ├── wheel.py
+    │           │   └── windows_support.py
+    │           └── setuptools-57.4.0.dist-info
+    │               ├── entry_points.txt
+    │               ├── INSTALLER
+    │               ├── LICENSE
+    │               ├── METADATA
+    │               ├── RECORD
+    │               ├── REQUESTED
+    │               ├── top_level.txt
+    │               └── WHEEL
+    ├── lib64 -> lib
+    └── pyvenv.cfg
+
+186 directories, 1141 files

@@ -10,8 +10,6 @@
     Version: 0.1    
 
 """
-
-
 import os
 import sys
 import glob
@@ -24,7 +22,7 @@ def getfname():
 	
 	:rtype: str
 	:return: The file name and full path of the selected file.
-readline
+
 	Created 11-9-2020 by Mike Lemon
 
 	TODO: Add a functioin to allow picking the data folder.
@@ -74,43 +72,39 @@ def lightstatus(filename):
 	Created 11/7/2020 by Mike Lemon
 	
 	'''
-	
 	prevstate = 0
-	print(" ")
-	print(filename)
+	
+	# print(" ")
+	# print(filename)
 	
 	# Open file for reading each line
-	file1 = open(filename, 'r') 
-	Lines = file1.readlines() 
-	
-	
-	for line in Lines: 
+	with open(filename, 'r') as file1:
+		Lines = file1.readlines() 
 		
-		# Parse the value of State, skip the first few lines
-		lightstate = line.split(",")[1] # keep the second element after the comma
-		if lightstate != "State" and prevstate != "State": # check that it is past the column lables		
+		for line in Lines: 
+			
+			# Parse the value of State, skip the first lines
+			lightstate = line.split(",")[1] # keep the second element after the comma
+			if lightstate != "State" and prevstate != "State": # check that it is past the column lables		
 
-			# Get only the time string from the line
-			sampletime = line.split("T")[1] # strip everything to the left f the T
-			sampletime = sampletime.split("\"")[0] # strip everything to the right of the Last double quote
+				# Get only the time string from the line
+				sampletime = line.split("T")[1] # strip everything to the left f the T
+				sampletime = sampletime.split("\"")[0] # strip everything to the right of the Last double quote
+			
+				sampledate = line.split("T")[0] # Keep everything to the left of the T
+				sampledate = sampledate.split("\"")[5] #keep everyting to the right of the last double quote
 		
-			sampledate = line.split("T")[0] # Keep everything to the left of the T
-			sampledate = sampledate.split("\"")[5] #keep everyting to the right of the last double quote
-	
-			# print the date, on, and off times
-			if int(prevstate) < int(lightstate):
-				print("Date:     ", sampledate)
-				print("On Time:  ", sampletime)
-		
-			if int(prevstate) > int(lightstate):
-				print("Off Time: ", sampletime)
-				print(" ")
-		# save thte current lightstate as the previoius	
-		prevstate = lightstate
-	
-	# Close file when done
-	file1.close()
+				# print the date, on, and off times
+				if int(prevstate) < int(lightstate):
+					print("Date:     ", sampledate)
+					print("On Time:  ", sampletime)
+			
+				if int(prevstate) > int(lightstate):
+					print("Off Time: ", sampletime)
+					print(" ")
+			# save thte current lightstate as the previoius	
+			prevstate = lightstate
 
 # test line to call the functioins        
-# lightstatus(getfname())
+lightstatus(getfname())
 
