@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-''' totaltimeon gets the total light-ON times for each switch called
-    in this module.
+''' start.py gets the total light-ON times for each switch called in this module.
     
     Written by: Mike Lemon
     
@@ -9,7 +8,6 @@
     Version: 0.2
     
 '''
-
 from lighttime import ontimes 
 import os
 
@@ -29,5 +27,3 @@ fpath = '/home/mikee/projects/lightcst/data/Lighton.txt'
 with open(fpath, 'w') as filehandle:
     for listitem in timelst:
         filehandle.write('%s\n' % listitem)
-
-

@@ -11,11 +11,9 @@ Version: 0.0.2
 import datetime
 import pandas as pd
 
-
 def ontimes(csvfile, switchname):
 
     ''' Calculate the length of time each light is On '''
-
     
     p_row = 0  # holds the previos row value
     frow = ""  # holds the current row value

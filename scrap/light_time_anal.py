@@ -21,5 +21,5 @@ for row in dts:
 
 # working with dates but not time
     for row in dts:
-    match = re.search('\d{2}-\d{2}-\d{2}', row)
-    dates.append(datetime.datetime.strptime(match.group(), '%y-%m-%d').date())
+        match = re.search('\d{2}-\d{2}-\d{2}', row)
+        dates.append(datetime.datetime.strptime(match.group(), '%y-%m-%d').date())
