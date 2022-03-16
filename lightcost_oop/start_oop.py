@@ -1,41 +1,37 @@
-# from lighttime import ontimes 
-# import os
-import pandas as pd
-import datetime
-from lighttime import ontimes 
+#!/usr/bin/python3
+"""
+The Lightcost class reviews csv log files created by an automated node-RED program.
 
+
+"""
+from lighttime import ontimes 
 class Lightcost:
-    ''' '''
-    def __init__(self, csvfile, log_file, switch_name):
+    
+    def __init__(self, csvfile, logdat, switch_name):
         self.csvfile = csvfile
-        self.log_file = log_file
+        self.logdat = logdat
         self.switch_name = switch_name 
 
     def Findtime(self):
-        return (ontimes(self.csvfile, self.switch_name))
+        ''' converts the string values to times and determines the delta 
 
-    #print(self.log_file)
+
+        '''
+        return (ontimes(self.csvfile, self.switch_name))
 
     @classmethod
     def Writetime(self):
-        with open(self.log_file, 'w') as filehandle:
+        with open(logdat, 'w') as filehandle:
             for listitem in timelst:
                 filehandle.write('%s\n' % listitem)
         return 
+csvfile = "~/projects/lightcst/data/LightStatus.csv"
+logdat = "/home/mikee/projects/lightcst/data/Lighton.txt"
+
+Flight = Lightcost(csvfile, logdat, "Front Lights", )
+Blight = Lightcost(csvfile, logdat, "Back Yard Lights")
     
-Lightcost.Writetime()
-
-Flight = Lightcost("Front Lights")
-Blight = Lightcost("Back Yard Lights")
-
 timelst = Flight.Findtime()
 timelst = timelst + Blight.Findtime()
 
-# print(Flight.switch_name)
-# print(Blight.switch_name)
-
-print(timelst)
-
-#qprint(help(Lightcost) )
-"~/projects/lightcst/data/LightStatus.csv"
-"/home/mikee/projects/lightcst/data/Lighton.txt"
+Lightcost.Writetime()
