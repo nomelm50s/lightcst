@@ -9,6 +9,8 @@ calculations only include the outside lights for now.
 '''
 from lighttime import ontimes 
 import os
+from time import time
+start = time()
 
 # location of the data file created by the control program.
 # TODO: make this a pick list in the gui
@@ -26,3 +28,6 @@ fpath = '/home/mikee/projects/lightcst/data/Lighton.txt'
 with open(fpath, 'w') as filehandle:
     for listitem in timelst:
         filehandle.write('%s\n' % listitem)
+
+end = time()
+print(f'It took {end - start} seconds!')
