@@ -49,5 +49,4 @@ def ontimes(csvfile, switchname):
 
             p_row = row['State'] # Done with condition checks, set the previos row to the current.
     
-    return(tms) # returns the list of times        
-
+    return(tms) # returns the list of times 
