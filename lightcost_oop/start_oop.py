@@ -4,10 +4,9 @@
 
 from lighttime import ontimes 
 from time import time
-start = time()
+start = time() # measure run time
 
-class Lightcost:
-    
+class LightCost:
     """ A class that determins electrical cost of night lights """
 
     def __init__(self, csvfile, logdat, switch_name):
@@ -15,15 +14,13 @@ class Lightcost:
         self.logdat = logdat
         self.switch_name = switch_name 
 
-    def Findtime(self):
-    
+    def findtime(self):
         """  determines the lights on time by calling ontimes() """
 
         return (ontimes(self.csvfile, self.switch_name))
 
     @classmethod
-    def Writetime(self):
-        
+    def writetime(self):
         """ writes each time period to a file """
 
         with open(logdat, 'w') as filehandle:
@@ -34,15 +31,16 @@ class Lightcost:
 csvfile = "/home/mikee/projects/lightcst/data/LightStatus.csv"
 logdat = "/home/mikee/projects/lightcst/data/Lighton.txt"
 
-""" calculate time on for each set of lights """
-Flight = Lightcost(csvfile, logdat, "Front Lights", )
-Blight = Lightcost(csvfile, logdat, "Back Yard Lights")
+""" calculate the on time for each set of lights """
+Flight = LightCost(csvfile, logdat, "Front Lights", )
+Blight = LightCost(csvfile, logdat, "Back Yard Lights")
 
-""" create a common log file of the on time values """    
-timelst = Flight.Findtime()
-timelst = timelst + Blight.Findtime()
+""" create a common log file with all of the on times """    
+timelst = Flight.findtime()
+timelst = timelst + Blight.findtime()
 
-Lightcost.Writetime()
+LightCost.writetime()
 
+# measure run timesudo
 end = time()
-print(f'It took {end - start} seconds!')
+print(f'It took start {end - start} seconds!')

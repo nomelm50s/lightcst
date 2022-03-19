@@ -10,6 +10,9 @@ Version: 0.0.2
 ''' 
 import datetime
 import pandas as pd
+from time import time
+
+start = time() # measure run time
 
 def ontimes(csvfile, switchname):
 
@@ -50,3 +53,7 @@ def ontimes(csvfile, switchname):
             p_row = row['State'] # Done with condition checks, set the previos row to the current.
     
     return(tms) # returns the list of times 
+
+# measure run time
+end = time()
+print(f'It took lighttime {end - start} seconds!')
