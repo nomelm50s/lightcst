@@ -39,8 +39,6 @@ def ontimes(csvfile, switchname):
             if row['State'] == OFF and p_row == ON: # Find the first occurance of OFF.
                 flend = datetime.datetime.strptime(row['Date'], format)
 
-            if flend == ON: # The lights are ON
-                
                 ontime = flend - flstart # delta of ON time
                 
                 datetm = datetm + ontime # Running sum of ON times
