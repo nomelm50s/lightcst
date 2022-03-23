@@ -12,7 +12,7 @@ import os
 
 # location of the data file created by the control program.
 # TODO: make this a pick list in the gui
-csvfile = '~/projects/lightcst/data/LightStatus.csv'
+csvfile = '/home/mikee/projects/lightcst/data/LightStatus.csv'
 
 # create a list of on and off times for the Front Lights so the time on can be calculated
 timelst = (ontimes(csvfile, "Front Lights"))

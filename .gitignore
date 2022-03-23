@@ -5067,3 +5067,4 @@ src/__pycache__/rdline.cpython-39.pyc
 .venv/share/jupyter/kernels/python3/logo-32x32.png
 .venv/share/jupyter/kernels/python3/logo-64x64.png
 .venv/share/man/man1/ipython.1.gz
+data/LightStatus.csv
