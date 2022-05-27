@@ -22,6 +22,7 @@ def ontimes(csvfile, switchname):
     ontime = 0  # Temp storage for total ON time
     ON = 1
     OFF = 0
+    
     datetm = datetime.timedelta()
     tms = []
 
@@ -29,25 +30,30 @@ def ontimes(csvfile, switchname):
     
     format = '%y/%m/%dT%H:%M:%S]' # The date format string used to convert to a datetime object
 
-    # Find each of the ON time periods for the switchname
+    # Find each of the ON and OFF times for each switchname
     for index, row in df.iterrows():
         if row['Name'] == switchname:
-            if row['State'] == ON and p_row == OFF: # Find the first occurance of ON when OFF for the named switch.
+            if row['State'] == ON and p_row == OFF: # Find the next occurance of ON.
                 flstart = datetime.datetime.strptime(row['Date'], format)
                 
-            if row['State'] == OFF and p_row == ON: # Find the first occurance of OFF when ON for the named switch.
+            if row['State'] == OFF and p_row == ON: # Find the next occurance of OFF.
                 flend = datetime.datetime.strptime(row['Date'], format)
 
-            if flend != 0: # The lights are still ON
-                ontime = flend - flstart # delta of ON time
-                datetm = datetm + ontime # Running sum of ON times
+                ontime = flend - flstart # get the delta of time ON
+                
+                datetm = datetm + ontime # Running sum of time ON
+                
                 time = str(ontime) # convert ontime to a formatted string
+                
                 sumtime = str(datetm) # convert summary time to a formatted string
-                frow = [switchname, time, sumtime] # store the current values 
-                tms.append(frow) # create a list of times 
-                flend = 0   # Resets the end point so it's readly for the next loop
-
+                
+                datestamp = row['Date'].split("T")[0] # get a clean datestamp with no time
+                
+                frow = [datestamp, switchname, time, sumtime] # create a list of values 
+                
+                tms.append(frow) # add a new row to the list 
+                
             p_row = row['State'] # Done with condition checks, set the previos row to the current.
     
-    return(tms) # returns the list of times        
+    return(tms) # returns a list of times ON     
 

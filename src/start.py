@@ -12,7 +12,7 @@ import os
 
 # location of the data file created by the control program.
 # TODO: make this a pick list in the gui
-csvfile = '~/projects/lightcst/data/LightStatus.csv'
+csvfile = '/home/mikee/projects/01-lightcst/data/LightStatus9.csv'
 
 # create a list of on and off times for the Front Lights so the time on can be calculated
 timelst = (ontimes(csvfile, "Front Lights"))
@@ -22,7 +22,10 @@ timelst = timelst + (ontimes(csvfile, "Back Yard Lights"))
 
 # Writes a list of summarized On-time values to a file
 # TODO: Send the output to a table or chart in the gui version
-fpath = '/home/mikee/projects/lightcst/data/Lighton.txt'
+fpath = '/home/mikee/projects/01-lightcst/data/Lighton9.txt'
 with open(fpath, 'w') as filehandle:
     for listitem in timelst:
         filehandle.write('%s\n' % listitem)
+
+
+
