@@ -2,17 +2,18 @@
 
 '''
 
-calclighttime for Python 3
-Written by: Mike Lemon
-Date of Creation: Jan 25, 2022
-Version: 0.0.2
+lightcost.py calculations of electricdal cost for the outside lights controlled with Node-RED.
+    Written by: Mike Lemon
+
+    Date of Creation: Jan 25, 2022
+    Version: 0.0.3
 
 ''' 
 import datetime
 import pandas as pd
 from time import time
 
-start = time() # measure run time
+start = time() # measure code run time
 
 def ontimes(csvfile, switchname):
 

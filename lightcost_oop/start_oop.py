@@ -28,8 +28,8 @@ class LightCost:
                 filehandle.write('%s\n' % listitem)
         return 
 
-csvfile = "/home/mikee/projects/lightcst/data/LightStatus.csv"
-logdat = "/home/mikee/projects/lightcst/data/Lighton.txt"
+csvfile = "/home/mikee/projects/01-lightcst/data/LightStatus.csv"
+logdat = "/home/mikee/projects/01-lightcst/data/Lighton.txt"
 
 """ calculate the on time for each set of lights """
 Flight = LightCost(csvfile, logdat, "Front Lights", )
