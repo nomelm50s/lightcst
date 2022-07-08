@@ -1,20 +1,3 @@
-data/LightStatus.csv
-data/LightStatusjnk.csv
-data/Lighton.txt
-data/Lighton.txt
-data/Lighton.txt
-data/LightStatus.csv
-data/LightStatus4.csv
-src/__pycache__/get_file.cpython-39.pyc
-src/__pycache__/lighttime.cpython-39.pyc
-src/__pycache__/readline.cpython-39.pyc
-src/__pycache__/totaltimeon.cpython-39.pyc
-docs/aavso.sqlite
-data/Lighton4.txt
-data/Lighton.txt
-data/LightStatus.csv
-src/__pycache__/rdline.cpython-39.pyc
-.vscode/launch.json
 .venv/bin/ipython
 .venv/bin/ipython3
 .venv/bin/jupyter
@@ -5067,4 +5050,3 @@ src/__pycache__/rdline.cpython-39.pyc
 .venv/share/jupyter/kernels/python3/logo-32x32.png
 .venv/share/jupyter/kernels/python3/logo-64x64.png
 .venv/share/man/man1/ipython.1.gz
-data/LightStatus.csv
