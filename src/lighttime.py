@@ -12,49 +12,52 @@ Version: 0.0.2
 import datetime
 import pandas as pd
 
+
 def ontimes(csvfile, switchname):
 
     ''' Calculate the length of time each light is On '''
 
     p_row = 0  # holds the previos row value
-    frow = ""  # holds the current row value
+    f_row = ""  # holds the current row value
     flstart = 0  # Time and date the lights are turned on
     flend = 0  # Time and date the lights are turned off
-    ontime = 0  # Temp storage for total ON time
-    ON = 1
-    OFF = 0
+    on_time = 0  # Temp storage for total on time
+    on = 1
+    off = 0
 
-    datetm = datetime.timedelta()
+    tm_delta = datetime.timedelta()
     tms = []
-     # reads the csv file into a Pandas Data Frame.
+    #  reads the csv file into a Pandas Data Frame.
     df = pd.read_csv(csvfile)
-    # The date date_format string used to convert to a datetime object
+    #  The date date_format string used to convert to a datetime object
     date_format = '%y/%m/%dT%H:%M:%S]'
 
-    # Find each of the ON and OFF times for each switchname
-    for row in df.iterrows():
-        if row['Name'] == switchname:
-            if row['State'] == ON and p_row == OFF: # Find the next occurance of ON.
-                flstart = datetime.datetime.strptime(row['Date'], date_format)
+    # Find each of the on and off times for each switchname
+    # for row in df.iterrows():
+    for row in df.itertuples():
+        if row[3] == switchname:
+            # Find the next occurance of on.
+            if row[2] == on and p_row == off:
+                flstart = datetime.datetime.strptime(row[4], date_format)
+            # Find the next occurance of off.
+            if row[2] == off and p_row == on:
+                flend = datetime.datetime.strptime(row[4], date_format)
+                # get the delta of time on
+                on_time = flend - flstart
+                # Running sum of time on
+                tm_delta = tm_delta + on_time
+                # convert on_time to a formatted string
+                time = str(on_time)
+                # convert summary time to a formatted string
+                sumtime = str(tm_delta)
+                # get a clean datestamp with no time
+                datestamp = row[4].split("T")[0]
+                # create a list of values
+                f_row = [datestamp, switchname, time, sumtime]
+                # add a new row to the list
+                tms.append(f_row)
+                # set the previos row to the current
+            p_row = row[2]
 
-            if row['State'] == OFF and p_row == ON: # Find the next occurance of OFF.
-                flend = datetime.datetime.strptime(row['Date'], date_format)
-
-                ontime = flend - flstart # get the delta of time ON
-
-                datetm = datetm + ontime # Running sum of time ON
-
-                time = str(ontime) # convert ontime to a formatted string
-
-                sumtime = str(datetm) # convert summary time to a formatted string
-
-                datestamp = row['Date'].split("T")[0] # get a clean datestamp with no time
-
-                frow = [datestamp, switchname, time, sumtime] # create a list of values
-
-                tms.append(frow) # add a new row to the list
-
-            p_row = row['State'] # Done with condition checks, set the previos row to the current
-
-    # returns a list of times ON
+    # returns a list of times on
     return tms

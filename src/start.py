@@ -12,7 +12,7 @@ from lighttime import ontimes
 
 # location of the data file created by the Node-RED control program.
 # TODO: make this a pick list in the web version.
-CSVFILE = '/home/mikee/projects/01-lightcst/data/LightStatus.csv'
+CSVFILE = '/home/mikee/projects/data/LightStatus.csv'
 
 # creates a list of the Front Lights on-time by day
 timelst = (ontimes(CSVFILE, "Front Lights"))
@@ -22,7 +22,7 @@ timelst = timelst + (ontimes(CSVFILE, "Back Yard Lights"))
 
 # Writes the  list of on-time values to the lighton.txt file
 # TODO: Send the output to a table or chart in the web version
-FPATH = '/home/mikee/projects/01-lightcst/data/Lighton11.txt'
+FPATH = '/home/mikee/projects/data/Lighton20.txt'
 with open(FPATH, 'w', encoding="utf8") as filehandle:
     for listitem in timelst:
         filehandle.write(f"{listitem}\n")
